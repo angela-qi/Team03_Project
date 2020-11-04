@@ -41,6 +41,7 @@
 }
 #summary p {
     border: 2px solid grey;
+    max-width: 90vw;
     margin: 3vw;
     margin-top: 1.5vw;
     margin-bottom: 1.5vw;
