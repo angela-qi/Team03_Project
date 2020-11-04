@@ -12,6 +12,12 @@
     margin-bottom: 1.5vw;
 }
 
+.carousel-item {
+    width: 30vw;
+    height: 25vw;
+}
+
+
 .thumbsup {
     width: 5vw;
     height: auto;
