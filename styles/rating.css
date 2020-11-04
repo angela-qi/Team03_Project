@@ -3,8 +3,10 @@ body{
 }
 #container{
     width: 95vw;
-    height: 95vh;
+    height: 100vh;
     margin: auto;
+    margin-top: 1%;
+    background-color: lightslategray;
 }
 #rating{
     width: 100%;
@@ -44,15 +46,16 @@ body{
     grid-row: 2 / span 1;
     grid-column: 3 / span 1;
 }
-#x{
+#ximage{
     float: right;
+    width: 30px;
 }
 #text{
     display: flex;
     justify-content: center;
 }
 #textfield{
-    width: 50%;
+    width: 80%;
     padding-top: 20%;
 }
 form{
