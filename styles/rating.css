@@ -1,0 +1,66 @@
+body{
+    background-color: grey;
+}
+#container{
+    width: 95vw;
+    height: 95vh;
+    margin: auto;
+}
+#rating{
+    width: 100%;
+    height: 20%;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+}
+#thumbsup1{
+    width: 20px;
+    margin: 1%;
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+}
+#thumbsup2{
+    width: 20px;
+    margin: 1%;
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+}
+#thumbsup3{
+    width: 20px;
+    margin: 1%;
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+}
+#select1{
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+}
+#select2{
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+}
+#select3{
+    grid-row: 2 / span 1;
+    grid-column: 3 / span 1;
+}
+#x{
+    float: right;
+}
+#text{
+    display: flex;
+    justify-content: center;
+}
+#textfield{
+    width: 50%;
+    padding-top: 20%;
+}
+form{
+    display: flex;
+    justify-content: center;
+}
+#submit{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
