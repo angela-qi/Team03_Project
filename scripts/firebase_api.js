@@ -19,4 +19,13 @@ firebase.initializeApp(firebaseConfig);
 // Create the Firestore database object
 // Henceforce, any reference to the database can be made with "db"
 //const db = firebase.firestore();
-const db = firebase.firestore();
+//const db = firebase.firestore();
+
+
+// Writing comments to the database
+function writeCommentData() {
+  var inputValue = document.getElementById("#textfield").value;
+  db.collection('REV_ID').doc('1').set({
+    COMMENT: inputValue
+  });
+}
