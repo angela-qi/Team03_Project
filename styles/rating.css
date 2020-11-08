@@ -13,7 +13,7 @@ body{
     height: 20%;
     display: grid;
     justify-items: center;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 33% 33% 33%;
 }
 #thumbsup1{
@@ -34,6 +34,18 @@ body{
     grid-row: 1 / span 1;
     grid-column: 3 / span 1;
 }
+#thumbsup4{
+    width: 20px;
+    margin: 1%;
+    grid-row: 1 / span 1;
+    grid-column: 4 / span 1;
+}
+#thumbsup5{
+    width: 20px;
+    margin: 1%;
+    grid-row: 1 / span 1;
+    grid-column: 5 / span 1;
+}
 #select1{
     grid-row: 2 / span 1;
     grid-column: 1 / span 1;
@@ -46,7 +58,15 @@ body{
     grid-row: 2 / span 1;
     grid-column: 3 / span 1;
 }
-#ximage{
+#select4{
+    grid-row: 2 / span 1;
+    grid-column: 4 / span 1;
+}
+#select5{
+    grid-row: 2 / span 1;
+    grid-column: 5 / span 1;
+}
+a #ximage{
     float: right;
     width: 30px;
 }
