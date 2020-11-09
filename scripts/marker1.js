@@ -2,6 +2,7 @@ function initMap() {
     //Location of Markers
     var test = createLocationArray();
     console.log(test);
+
     //Location of Vancouver
     const vancouver = { lat: 49.2827, lng: -123.1207 };
 
@@ -16,34 +17,14 @@ function initMap() {
         map: map,
     });
 
-    //map.addMarker(new google.maps.Marker.position(test_cafe));
-
 }
-
 
 function createLocationArray() {
-    var docRef = db.collection("BUS_ID").doc("1");
     var array = [];
-    docRef.get().then(function (doc) {
-        if (doc.exists) {
-            let json = doc.data();
-            Object.keys(json).forEach((message) => {
-                if (message == 'Name') {
-                    array.splice(0, 0, json[message]);
-                } else if (message == 'Address') {
-                    array.splice(1, 0, json[message]);
-                } else if (message == 'Longitude') {
-                    array.splice(2, 0, json[message]);
-                } else {
-                    array.splice(3, 0, json[message]);
-                }
-            });
-            console.log("Document:", array);
-        } else {
-            console.log("No such document");
-        }
-    }).catch(function (error) {
-        console.log("Error getting document:", error);
+    db.collection("BUS_ID").get().then(function(querySnapshot) {
+        querySnapshot.forEach(function(doc) {
+            array.push([doc.data().Name, doc.data().Address, doc.data().Latitude, doc.data().Longitude]);
+        });
     });
+    return array;
 }
-
