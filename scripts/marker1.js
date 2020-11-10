@@ -8,7 +8,7 @@ function initMap() {
 
     //Map centered at Vancouver
     const map = new google.maps.Map(document.getElementById("map-container-google-1"), {
-        zoom: 10,
+        zoom: 15,
         center: vancouver,
     });
     //Marker at Vancouver
