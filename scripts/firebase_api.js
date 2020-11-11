@@ -67,6 +67,15 @@ function writeCommentData() {
   document.getElementById('select3').checked = false;
   document.getElementById('select4').checked = false;
   document.getElementById('select5').checked = false;
-
-  
 }
+
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    db.ref('/ACC_ID/'+ user.uid).on("value")
+    .then(function(snapshot) {
+      document.getElementById("user-name").innerText = "Welcome: " + snapshot.val().name;
+    })
+  } else {
+    window.location = "main.html"
+  }
+}); 

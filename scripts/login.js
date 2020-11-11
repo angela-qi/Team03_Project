@@ -16,7 +16,7 @@ var uiConfig = {
             //------------------------------------------------------------------------------------------
             var user = authResult.user;
             if (authResult.additionalUserInfo.isNewUser) {
-                db.collection("users").doc(user.uid).set({
+                db.collection("ACC_ID").doc(user.uid).set({
                         name: user.displayName,
                         email: user.email
                     }).then(function () {
