@@ -15,6 +15,9 @@
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="styles/style.css">  
 
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
 </head>
 
 <body>
@@ -47,6 +50,7 @@
     </div> 
     <!--Google Maps-->
 
+
     <!----------------------------------------------->
     <!-- JS: Boostrap, Firebase, API related    -->
     <!----------------------------------------------->
@@ -64,10 +68,17 @@
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
 
+    <!-- Firebase libraries from CDN --> <!--
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script> -->
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
     <script defer src=
     "https://maps.googleapis.com/maps/api/js?key=AIzaSyA6eUXIYt0K67sr6zHrao1j2TwavpB98u8&callback=initMap&libraries=&v=weekly"></script>
 
-    <script src="scripts/marker.js"> </script>
+    <script src="scripts/initmap.js"> </script>
+    <script src="scripts/firebase_api.js"> </script>
     
 
 </body>

@@ -11,4 +11,4 @@ function initMap() {
         position: vancouver,
         map: map,
     });
-} 
+}
