@@ -29,7 +29,7 @@ function initMap() {
 
     //Map centered at Vancouver
     var map = new google.maps.Map(document.getElementById("map-container-google-1"), {
-        zoom: 10,
+        zoom: 13,
         center: vancouver,
         mapTypeId: 'roadmap'
     });
