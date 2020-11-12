@@ -69,7 +69,7 @@
         </div>
         <p id="text">Leave a Comment</p>
         <form>
-            <input id="textfield" type="text">
+            <input id="textfield" type="text" onkeydown="if (event.keyCode == 13) { alert('Press the submit button.');return false;}">
         </form>
         <div id="submit"><button onclick="writeCommentData();" type="button">Submit</button></div>
 
