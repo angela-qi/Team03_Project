@@ -7,7 +7,9 @@ function initMap() {
             array.push([doc.data().Name, doc.data().Address, doc.data().Latitude, doc.data().Longitude]);
         });
     });
+    
     var infowindow = new google.maps.InfoWindow();
+
     location.then(function () {
         for (var i = 0; i < array.length; i++) {
             marker = new google.maps.Marker({
@@ -29,7 +31,7 @@ function initMap() {
 
     //Map centered at Vancouver
     var map = new google.maps.Map(document.getElementById("map-container-google-1"), {
-        zoom: 13,
+        zoom: 10,
         center: vancouver,
         mapTypeId: 'roadmap'
     });
