@@ -16,8 +16,7 @@ function initMap() {
                 position: new google.maps.LatLng({ lat: array[i][2], lng: array[i][3] }),
                 map: map
             });
-            console.log("New marker made for " + array[i][0]);
-            google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
                     infowindow.setContent(array[i][0]);
                     infowindow.open(map, marker);
