@@ -7,15 +7,16 @@ function initMap() {
             array.push([doc.data().Name, doc.data().Address, doc.data().Latitude, doc.data().Longitude]);
         });
     });
+    
     var infowindow = new google.maps.InfoWindow();
+
     location.then(function () {
         for (var i = 0; i < array.length; i++) {
             marker = new google.maps.Marker({
                 position: new google.maps.LatLng({ lat: array[i][2], lng: array[i][3] }),
                 map: map
             });
-            console.log("New marker made for " + array[i][0]);
-            google.maps.event.addListener(marker, 'mouseover', (function(marker, i) {
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
                     infowindow.setContent(array[i][0]);
                     infowindow.open(map, marker);
@@ -29,7 +30,7 @@ function initMap() {
 
     //Map centered at Vancouver
     var map = new google.maps.Map(document.getElementById("map-container-google-1"), {
-        zoom: 13,
+        zoom: 10,
         center: vancouver,
         mapTypeId: 'roadmap'
     });
