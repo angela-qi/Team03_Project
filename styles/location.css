@@ -46,14 +46,14 @@
     margin-bottom: 1.5vw;
 }
 #summary p {
-    border: 2px solid grey;
+    border: 2px solid black;
     max-width: 90vw;
     margin: 3vw;
     margin-top: 1.5vw;
     margin-bottom: 1.5vw;
 }
 
-#comments {
+#comments_secition {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,15 +65,8 @@
     margin-bottom: 1.5vw;
 }
 
-#comment1 {
-    border: 2px solid grey;
-    margin: 3vw;
-    margin-top: 1.5vw;
-    margin-bottom: 1.5vw;
-}
-
-#comment2 {
-    border: 2px solid grey;
+.comments {
+    border: 2px solid black;
     margin: 3vw;
     margin-top: 1.5vw;
     margin-bottom: 1.5vw;
