@@ -10,20 +10,26 @@ function initMap() {
     
     var infowindow = new google.maps.InfoWindow();
 
+const contentString = "\n" + '<a href="location.html">Summary</a>';
+
     location.then(function () {
         for (var i = 0; i < array.length; i++) {
             marker = new google.maps.Marker({
                 position: new google.maps.LatLng({ lat: array[i][2], lng: array[i][3] }),
+                url: "location.html",
                 map: map
             });
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
                 return function() {
-                    infowindow.setContent(array[i][0]);
+                    infowindow.setContent(array[i][0] + contentString);
                     infowindow.open(map, marker);
                 }
             })(marker, i));
+
         };
     });
+
+    
 
     //Location of Vancouver
     const vancouver = { lat: 49.2827, lng: -123.1207 };
