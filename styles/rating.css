@@ -1,12 +1,10 @@
 body{
-    background-color: #6fa886;
 }
 #container{
     width: 95vw;
     height: 100vh;
     margin: auto;
     margin-top: 1%;
-    background-color: #6b93cf;
 }
 #rating{
     width: 100%;
@@ -93,8 +91,4 @@ form{
     display: flex;
     justify-content: center;
     margin-top: 10px;
-}
-#button{
-    background-color: #2f6bc4;
-    color: white;
 }

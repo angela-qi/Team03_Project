@@ -23,17 +23,29 @@ h3 {
 }
 
 .comments {
-    border-color: #D44845!important;
+    border-color: #6b93cf!important;
 }
 
 #summary p {
-    border-color: #D44845!important;
+    border-color: #6b93cf!important;
 }
 
 h3 {
-    color: #E39940!important;
+    color: #a87c60!important;
 }
 
 #container {
     background-color: #5C8B63;
+}
+
+#button{
+    background-color: #2f6bc4;
+    color: white;
+}
+
+.colorlightgreen{
+    background-color: #6fa886;
+}
+#container{
+    background-color: #6b93cf;
 }

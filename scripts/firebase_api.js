@@ -69,7 +69,6 @@ function writeCommentData() {
   document.getElementById('select5').checked = false;
 }
 
-
 // firebase.auth().onAuthStateChanged(function(user) {
 //   if (user) {
 //     db.ref('/ACC_ID/'+ user.uid).on("value")
