@@ -55,6 +55,28 @@ var uiConfig = {
     privacyPolicyUrl: 'main.html',
     accountChooserEnabled: false
 };
+
+var user = firebase.auth().currentUser;
+var name, email, photoUrl, uid;
+
+function getUser(){
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user != null) {
+        console.log(user);
+        name = user.displayName;
+        email = user.email;
+        uid = user.uid;
+        console.log(name);
+        console.log(email);
+        console.log(uid);
+    } else {
+        console.log("Nobody is signed in.")
+    }
+})
+}
+
+getUser();
+
 // The start method will wait until the DOM is loaded.
 // Inject the login interface into the HTML
 ui.start('#firebaseui-auth-container', uiConfig);
