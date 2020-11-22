@@ -41,6 +41,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="Recent.html">Recent</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html" onclick="signOut()">Sign out</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -48,7 +51,7 @@
     <!-- Text content -->
     <div id="textcontent" style="display: flex; flex-direction: column;">
         <p style="align-self: center; font-size: 3em; color: #2b5e4d;">StudyBuddy</p>
-        <p style="align-self: center; color: #5C8B63;">An app that let's users submit comments and ratings to study
+        <p style="align-self: center; color: #5C8B63;">An app that lets users submit comments and ratings to study
             locations.</p>
         <p style="align-self: center; color: #5C8B63;">Find <a href="location.html">study areas</a> now and then submit
             your own reviews!</p>
@@ -81,7 +84,7 @@
 
     <!-- Firebase libraries from CDN -->
     <!-- <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script> -->
-    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
     <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
 
@@ -89,9 +92,9 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6eUXIYt0K67sr6zHrao1j2TwavpB98u8&callback=initMap&libraries=&v=weekly">
     </script>
 
-    <script src="scripts/initmap.js"> </script>
-
     <script src="scripts/firebase_api.js"> </script>
+    
+    <script src="scripts/initmap.js"> </script>
 
     <script src="scripts/welcome_user.js"></script>
 

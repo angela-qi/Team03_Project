@@ -10,7 +10,10 @@
     <!-- Bootstrap for Mobile-first, and JQuery -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    
+
+    <!-- Firebase stuff for auth-->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+
 
     <!-- Optional styles and scripts of your own -->
     <link rel="stylesheet" href="styles/location.css">
@@ -79,23 +82,23 @@
             <img class="thumbsup" src="https://image.flaticon.com/icons/png/512/25/25297.png" alt="thumbsup">
         </div>
 
-        <div id="submit"><button id="button" type="button" onclick="location.href='rating.html'">Leave a Review</button></div>
-        
+        <div id="submit"><button class="button" type="button" onclick="checkLogin()">Leave a Review</button></div>
+
         <div id="summary">
             <h2>Summary</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl tellus, lacinia ut tristique ac, varius eu arcu. Donec ac mauris scelerisque, hendrerit purus a, maximus metus. Pellentesque sagittis egestas ligula, at pulvinar dolor elementum id. Nam eleifend lobortis consequat. Praesent id libero a odio malesuada tempor ac sed ante. Mauris sed faucibus lectus. Phasellus lacinia, neque ut mollis ultrices, arcu leo dictum velit, eget aliquam dolor nunc vitae dui.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl tellus, lacinia ut tristique ac,
+                varius eu arcu. Donec ac mauris scelerisque, hendrerit purus a, maximus metus. Pellentesque sagittis
+                egestas ligula, at pulvinar dolor elementum id. Nam eleifend lobortis consequat. Praesent id libero a
+                odio malesuada tempor ac sed ante. Mauris sed faucibus lectus. Phasellus lacinia, neque ut mollis
+                ultrices, arcu leo dictum velit, eget aliquam dolor nunc vitae dui.</p>
         </div>
 
         <div id="comments_secition">
             <h2>Comments</h2>
-            <div class="comments">
-                <h3>User1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl tellus, lacinia ut tristique ac, varius eu arcu. Donec ac mauris scelerisque, hendrerit purus a, maximus metus. Pellentesque sagittis egestas ligula, at pulvinar dolor elementum id. Nam eleifend lobortis consequat. Praesent id libero a odio malesuada tempor ac sed ante. Mauris sed faucibus lectus. Phasellus lacinia, neque ut mollis ultrices, arcu leo dictum velit, eget aliquam dolor nunc vitae dui.</p>
-            </div>
-            <div class="comments">
-                <h3>User2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nisl tellus, lacinia ut tristique ac, varius eu arcu. Donec ac mauris scelerisque, hendrerit purus a, maximus metus. Pellentesque sagittis egestas ligula, at pulvinar dolor elementum id. Nam eleifend lobortis consequat. Praesent id libero a odio malesuada tempor ac sed ante. Mauris sed faucibus lectus. Phasellus lacinia, neque ut mollis ultrices, arcu leo dictum velit, eget aliquam dolor nunc vitae dui.</p>
-            </div>
+            <!--<div class="comments">
+                 <h3>User1</h3>
+                <p id="comment1"></p>
+            </div>-->
         </div>
     </div>
 
@@ -112,9 +115,16 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
 
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+
     <!--------------------------------------------------------------------->
     <!-- JS files: Your own JavaScript functions included here    -->
     <!--------------------------------------------------------------------->
+    <script src="scripts/firebase_api.js"></script>
+
+    <script src="scripts/initmap.js"> </script>
 
 </body>
 

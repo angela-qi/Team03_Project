@@ -46,18 +46,29 @@ function writeCommentData() {
     var ratingValue = "No Rating";
   }
 
+
+  var user = firebase.auth().currentUser;
+  var name;
+
+  if (user != null) {
+    name = user.displayName;
+  }
+
+
+
   var date = new Date();
   var datePrint = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
 
   console.log("Left a rating/comment");
   const db = firebase.firestore();
-  db.collection("REV_ID").doc("Location1").set({
-      COMMENT: inputValue,
-      RATING: ratingValue,
-      DATE: datePrint
-    }).then(function () {
-      console.log("Document successfully written!");
-    });
+  db.collection("REV_ID").doc(name).set({
+    COMMENT: inputValue,
+    RATING: ratingValue,
+    DATE: datePrint,
+    USER: name
+  }).then(function () {
+    console.log("Document successfully written!");
+  });
 
   document.getElementById('select1').checked = false;
   document.getElementById('select2').checked = false;
@@ -65,6 +76,39 @@ function writeCommentData() {
   document.getElementById('select4').checked = false;
   document.getElementById('select5').checked = false;
 }
+
+$("#comments_secition").append("<div class='comments'></div>");
+db.collection("REV_ID").get().then(function(querySnapshot) {
+  querySnapshot.forEach(function(doc) {
+        var n = doc.data().COMMENT;
+        var i = doc.data().RATING;
+        var j = doc.data().DATE;
+        var x = doc.data().USER;
+    
+        
+        $(".comments").append("<div id='comment1'></div>");
+        $("#comment1").append("<h3>" + x + "</h3>");
+        $("#comment1").append("Rating: " + i);
+        $("#comment1").append("<br>" + n);
+        $("#comment1").append("<br>" + j);
+  });
+});
+
+// db.collection("REV_ID")
+//   .get()
+//   .then(function (doc) {
+//     var n = doc.data().COMMENT;
+//     var i = doc.data().RATING;
+//     var j = doc.data().DATE;
+//     var x = doc.data().USER;
+
+//     $("#comments_secition").append("<div class='comments'></div>");
+//     $(".comments").append("<div id='comment1'></div>");
+//     $("#comment1").append("<h3>" + x + "</h3>");
+//     $("#comment1").append("Rating: " + i);
+//     $("#comment1").append("<br>" + n);
+//     $("#comment1").append("<br>" + j);
+//   })
 
 // firebase.auth().onAuthStateChanged(function(user) {
 //   if (user) {
