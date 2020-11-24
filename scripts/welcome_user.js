@@ -1,3 +1,4 @@
+//Pulls from DB and displays a welcome message for the current user.
 function userWelcome() {
     firebase.auth().onAuthStateChanged(function (user) {
         if (user) {
@@ -16,6 +17,7 @@ function userWelcome() {
 
 userWelcome();
 
+//Signs user out.
 function signOut() {
     firebase.auth().signOut()
         .then(function () {
