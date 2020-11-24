@@ -47,7 +47,7 @@
 }
 #summary p {
     border: 2px solid black;
-    max-width: 90vw;
+    width: 90vw;
     margin: 3vw;
     margin-top: 1.5vw;
     margin-bottom: 1.5vw;
@@ -58,7 +58,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    max-width: 90vw;
+    width: 90vw;
     text-align: center;
     margin: 3vw;
     margin-top: 1.5vw;
