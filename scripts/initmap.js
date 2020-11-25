@@ -10,7 +10,7 @@ function initMap() {
 
     var infowindow = new google.maps.InfoWindow();
 
-    const contentString = "\n" + '<a href="location.html">Summary</a>';
+    const contentString = "\n" + '</br></br><a href="location.html">Summary</a>';
 
     location.then(function () {
         for (var i = 0; i < array.length; i++) {
