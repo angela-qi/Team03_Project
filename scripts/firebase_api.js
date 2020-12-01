@@ -57,7 +57,7 @@ function writeCommentData() {
 
 
   var date = new Date();
-  var datePrint = date.getFullYear() + "-" + date.getMonth() + "-" + date.getDate();
+  var datePrint = date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
 
   console.log("Left a rating/comment");
   const db = firebase.firestore();
