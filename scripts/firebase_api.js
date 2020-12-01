@@ -65,7 +65,8 @@ function writeCommentData() {
     COMMENT: inputValue,
     RATING: ratingValue,
     DATE: datePrint,
-    USER: name
+    USER: name,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp()
   }).then(function () {
     console.log("Document successfully written!");
   });
@@ -76,6 +77,10 @@ function writeCommentData() {
   document.getElementById('select4').checked = false;
   document.getElementById('select5').checked = false;
 }
+
+db.collection("REV_ID")
+    .orderBy("timestamp", "desc").onSnapshot(snapshot => {      
+    });
 
 $("#comments_secition").append("<div class='comments'></div>");
 db.collection("REV_ID").get().then(function(querySnapshot) {
