@@ -78,12 +78,8 @@ function writeCommentData() {
   document.getElementById('select5').checked = false;
 }
 
-db.collection("REV_ID")
-    .orderBy("timestamp", "desc").onSnapshot(snapshot => {      
-    });
-
 $("#comments_secition").append("<div class='comments'></div>");
-db.collection("REV_ID").get().then(function(querySnapshot) {
+db.collection("REV_ID").orderBy("timestamp", "desc").get().then(function(querySnapshot) {
   querySnapshot.forEach(function(doc) {
         var n = doc.data().COMMENT;
         var i = doc.data().RATING;
