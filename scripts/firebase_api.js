@@ -94,30 +94,3 @@ db.collection("REV_ID").orderBy("timestamp", "desc").get().then(function(querySn
         $("#comment1").append("<br>" + j);
   });
 });
-
-// db.collection("REV_ID")
-//   .get()
-//   .then(function (doc) {
-//     var n = doc.data().COMMENT;
-//     var i = doc.data().RATING;
-//     var j = doc.data().DATE;
-//     var x = doc.data().USER;
-
-//     $("#comments_secition").append("<div class='comments'></div>");
-//     $(".comments").append("<div id='comment1'></div>");
-//     $("#comment1").append("<h3>" + x + "</h3>");
-//     $("#comment1").append("Rating: " + i);
-//     $("#comment1").append("<br>" + n);
-//     $("#comment1").append("<br>" + j);
-//   })
-
-// firebase.auth().onAuthStateChanged(function(user) {
-//   if (user) {
-//     db.ref('/ACC_ID/'+ user.uid).on("value")
-//     .then(function(snapshot) {
-//       document.getElementById("user-name").innerText = "Welcome: " + snapshot.val().name;
-//     })
-//   } else {
-//     window.location = "main.html"
-//   }
-// });
